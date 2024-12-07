@@ -1,11 +1,9 @@
 function formatMessage(message, maxLength) { 
-    const m = maxLength;
-    const mes = parseFloat(message);
-    if (mes <= maxLength) {
+    const m = maxLength;    
     const res = message.slice(0, m) + "...";    
     return res
     }
-    }
+    
     
 formatMessage("Curabitur ligula sapien", 16);
 formatMessage("Curabitur ligula sapien", 23);
