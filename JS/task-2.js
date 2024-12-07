@@ -1,8 +1,12 @@
-function formatMessage(message, maxLength) {     
-    const m = maxLength;  
+function formatMessage(message, maxLength) { 
+    const m = maxLength;
+    const mes = parseFloat(message);
+    if (mes <= maxLength) {
     const res = message.slice(0, m) + "...";    
-    return res  
-}
+    return res
+    }
+    }
+    
 formatMessage("Curabitur ligula sapien", 16);
 formatMessage("Curabitur ligula sapien", 23);
 formatMessage("Vestibulum facilisis purus nec", 20);

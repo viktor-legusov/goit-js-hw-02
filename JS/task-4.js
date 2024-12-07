@@ -13,8 +13,7 @@ function getShippingCost(country) {
             return "Shipping to Jamaica will cost 120 credits";
         case 'Sweden':
             return "Sorry, there is no delivery to your country";
-    }  
-    return  
+    }       
 }
 getShippingCost("Australia");
 getShippingCost("Germany");
