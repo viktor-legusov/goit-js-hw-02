@@ -2,7 +2,7 @@ function formatMessage(message, maxLength) {
     const m = maxLength;    
     const res = message.slice(0, m) + "..."; 
     return res    
-    }     
+    }    
     
     
     
