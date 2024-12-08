@@ -1,4 +1,4 @@
-function getShippingCost(country) {  
+function getShippingCost(country) {      
     switch (country) {
         case 'Australia':
             return "Shipping to Australia will cost 170 credits";            
