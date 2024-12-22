@@ -1,20 +1,15 @@
-function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    const totalPrice = quantity * pricePerDroid;
-    const message = `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-    if (totalPrice > customerCredits) {
-        return "Insufficient funds!";
-       }    
-       return message
+function isEnoughCapacity(products, containerSize) {
+    let total = 0;
+    for (const key in products) {
+        total += products[key]
     }
-    makeTransaction(5, 3000, 23000);
-    makeTransaction(3, 1000, 15000);
-    makeTransaction(10, 500, 8000);
-    makeTransaction(8, 2000, 10000);
-    makeTransaction(10, 500, 5000);
-    console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
-    console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
-    console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
-    console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
-    console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
+    return total < containerSize;
+}
+
+console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
+console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
+console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatos: 3 }, 14)); // true
+console.log(isEnoughCapacity({ apples: 18, potatos: 5, oranges: 2 }, 7)); // false
+
     
     
